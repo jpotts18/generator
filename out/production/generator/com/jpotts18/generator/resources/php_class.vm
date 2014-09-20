@@ -1,0 +1,22 @@
+#set ($money = '$')
+<?php
+
+/**
+ * Define $model.getName()
+ */
+
+class $model.getName()
+{
+#foreach( $prop in $model.getProperties() )
+    $prop.getAccess() $money$prop.getName() = '';
+#end
+
+#foreach( $meth in $model.getMethods() )
+    $meth.getAccess() function $meth.getName()(#if( $meth.getArguments().size() > 0 )<args>#end) {
+        return
+    }
+
+#end
+
+
+}

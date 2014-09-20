@@ -1,0 +1,14 @@
+#set ( $PROTOTYPE = '.prototype.')
+
+function $model.getName() {
+#foreach( $prop in $model.getProperties() )
+    this.$prop.getName() = ''
+#end
+}
+
+#foreach( $meth in $model.getMethods() )
+$model.getName()$PROTOTYPE$meth.getName() = function(){
+    return
+}
+
+#end
