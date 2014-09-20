@@ -1,7 +1,0 @@
-@interface $model.getName() : NSObject
-
-#foreach( $prop in $model.getProperties() )
-@property (readonly) $prop.getDataType() *$prop.getName();
-#end
-
-@end
