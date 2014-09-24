@@ -1,5 +1,6 @@
 package com.jpotts18.generator.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,6 +52,30 @@ public class AmazingModel {
 
     public List<Method> getMethods() {
         return methods;
+    }
+
+    public List<Method> getPrivateMethods(){
+        List<Method> l = new ArrayList<Method>();
+        for (Method m: methods)
+        {
+            if (m.getAccess().equals(Access.PRIVATE))
+            {
+                l.add(m);
+            }
+        }
+        return l;
+    }
+
+    public List<Method> getPublicMethods(){
+        List<Method> l = new ArrayList<Method>();
+        for (Method m: methods)
+        {
+            if (m.getAccess().equals(Access.PUBLIC))
+            {
+                l.add(m);
+            }
+        }
+        return l;
     }
 
     public void setMethods(List<Method> methods) {

@@ -5,8 +5,7 @@
  * Define $model.getName()
  */
 
-class $model.getName()
-{
+class $model.getName() {
 #foreach( $prop in $model.getProperties() )
     $prop.getAccess() $money$prop.getName() = '';
 #end
@@ -15,8 +14,6 @@ class $model.getName()
     $meth.getAccess() function $meth.getName()(#if( $meth.getArguments().size() > 0 )<args>#end) {
         return
     }
-
 #end
-
 
 }

@@ -1,0 +1,25 @@
+class $model.getName()
+
+    #foreach( $prop in $model.getProperties() )
+#if($foreach.index == 0)attr_accessor#end#if( $prop.getAccess() == "private" ) :$prop.getName()#else$prop.getName()#end#if($foreach.count !=$model.getProperties().size()),#end
+    #end
+
+
+    #foreach( $meth in $model.getPublicMethods() )
+def $meth.getName()#if( $meth.getArguments().size() > 0 )(**args)#end
+
+    end
+
+    #end
+
+    #if ( $model.getPrivateMethods().size() > 0 )
+private
+
+    #foreach( $meth in $model.getPrivateMethods() )
+def $meth.getName()#if( $meth.getArguments().size() > 0 )(**args)#end
+
+    end
+    #end
+    #end
+
+end

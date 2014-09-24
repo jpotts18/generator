@@ -54,6 +54,7 @@ public class Data {
         Method setName = new Method(PUBLIC, "void", "setName", nameArgs);
 
         Method getColor = new Method(PUBLIC, "String", "getColor");
+        Method privateColor = new Method(PRIVATE, "String", "privateColor");
 
         Arguments arguments1 = new Arguments("String", "color");
         List<Arguments> colorArgs = new ArrayList<Arguments>();
@@ -65,6 +66,7 @@ public class Data {
         methodList.add(setName);
         methodList.add(getColor);
         methodList.add(setColor);
+        methodList.add(privateColor);
 
         return methodList;
     }

@@ -26,7 +26,8 @@ public class Main {
 //            t = ve.getTemplate("./src/com/jpotts18/generator/resources/js_class.vm");
 //            t = ve.getTemplate("./src/com/jpotts18/generator/resources/python_class.vm");
 //            t = ve.getTemplate("./src/com/jpotts18/generator/resources/php_class.vm");
-            t = ve.getTemplate("./src/com/jpotts18/generator/resources/objc_class.vm");
+//            t = ve.getTemplate("./src/com/jpotts18/generator/resources/objc_class.vm");
+            t = ve.getTemplate("./src/com/jpotts18/generator/resources/ruby_class.vm");
         } catch (ResourceNotFoundException e){
             e.printStackTrace();
         }
